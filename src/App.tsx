@@ -1,11 +1,14 @@
 import React from 'react';
 import Article  from "./componentes/Article"
+import Header from "./componentes/Header"
+import Routes from "./routes"
+
 
 function App() {
   return (
     <>
-    <Article></Article>
-    <h1>Hello world</h1>
+    <Header/>
+    <Routes/>
     </>
   );
 }

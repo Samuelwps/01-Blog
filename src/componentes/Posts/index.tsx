@@ -1,10 +1,11 @@
 interface PostItemsProps {
     Usuarios: {
+        id: string;
         title: string;
-        description: string;
+        category: string;
         author: string;
 
-        children: string;
+        description: string;
 
         date: string;
     }
@@ -12,12 +13,12 @@ interface PostItemsProps {
 
 const Post = (props :PostItemsProps) => {
     return(
-        <div className="post">
+        <a href={props.Usuarios.id}className="post mx-2">
             <div className="img-post"></div>
-            <h5>{props.Usuarios.description}</h5>
+            <h5>{props.Usuarios.category}</h5>
             <h3>{props.Usuarios.title}</h3>
             <p className="mt-1">
-                {props.Usuarios.children}
+                {props.Usuarios.description}
             </p>
             <div className="flex pt-2">
                 <div className="img-profile"></div>
@@ -26,7 +27,7 @@ const Post = (props :PostItemsProps) => {
                     <p>{props.Usuarios.date}</p> 
                 </div>
             </div>
-        </div>
+        </a>
     );
 }
 
