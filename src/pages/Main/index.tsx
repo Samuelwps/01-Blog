@@ -25,8 +25,6 @@ const Main =() => {
         })
     }, [])
 
-
-
     return(
         <>
         <section className="container">
